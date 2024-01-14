@@ -1,0 +1,5 @@
+Because I want to keep my user name private,
+and hardcoding user's home path is also not
+the best idea. Username will be kept in this
+file. Remember to remove .template from file
+name.
