@@ -18,12 +18,9 @@ Because bash is a little bit weird, this hook uses small python wrapper to spawn
 
 ### How to install:
 ```
-$ mkdir tmp_install_dir
-$ git clone --depth 1 https://github.com/music-cat-bread/libvirt-cpu-isolation-hook/tree/main tmp_install_dir
-$ cd tmp_install_dir
-$ echo $(logname) > username
-$ mv vm-config $HOME/.config/
-$ chmod 444 $HOME/.config/vm-config
+$ mkdir tmp_install_dir && git clone --depth 1 https://github.com/music-cat-bread/libvirt-cpu-isolation-hook/tree/main tmp_install_dir && cd tmp_install_dir
+$ echo $(logname) > username.template && mv username.template username
+$ mv vm-config $HOME/.config/ && chmod 444 $HOME/.config/vm-config
 # mkdir -p /etc/libvirt/hooks/qemu.d/
 # mv hook.sh username wrapper.py /etc/libvirt/hooks/qemu.d
 # chown root:root /etc/libvirt/hooks/qemu.d/{hook.sh,username,wrapper.py}
